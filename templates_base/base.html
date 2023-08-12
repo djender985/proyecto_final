@@ -24,8 +24,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'lista_blog' %}">Muro de Tiles</a>
-                <a class="navbar-brand" href="{% url 'crear_entrada' %}">Publicar Tile</a>
+                <a class="navbar-brand" href="{% url 'wall' %}">Muro de Tiles</a>
+                <a class="navbar-brand" href="{% url 'crear_tile' %}">Publicar Tile</a>
                 {% if user.is_authenticated %}
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

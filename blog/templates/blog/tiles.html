@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block navigation %}
-{% endblock navigation %}
 
 {% block contenido %}
 <h3>Tiles</h3>
@@ -13,12 +11,12 @@
     {% for articulo in articulos %}
     <tr>
         <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"> </td>
-        <td style="font-size: large;"> {{ articulo.autor }} ({{ articulo.fecha }}) </td>
+        <td style="font-size: large;"> {{ articulo.autor }} {{ articulo.fecha }} </td>
         <td></td>
     </tr>
     <tr>
         <td></td>
-        <td style="font-size: medium;"> {{ articulo.titulo }} </td> 
+        <td style="font-size: medium;"> {{ articulo.titulo }} </td>
     </tr>
     <tr> 
         <td></td>

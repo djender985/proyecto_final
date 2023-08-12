@@ -15,7 +15,6 @@ def listar_tiles(request):
             "titulo": a.titulo,
             "subtitulo": a.subtitulo,
             "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:30]),
-            "imagen": a.imagen
         }
         for a in articulos
     ]
@@ -43,14 +42,13 @@ def crear_tile(request):
             titulo = data["titulo"]
             subtitulo = data["subtitulo"]
             cuerpo = data["cuerpo"]
-            imagen = data["imagen"]
             # creo un articulo en memoria RAM
-            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo, imagen=imagen)
+            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo)
             # Lo guardan en la Base de datos
             articulo.save()
 
             # Redirecciono al usuario a la lista de cursos
-            url_exitosa = reverse('tiles')  # estudios/cursos/
+            url_exitosa = reverse('wall')  # estudios/cursos/
             return redirect(url_exitosa)
     else:  # GET
         formulario = FormTile()
@@ -68,7 +66,7 @@ def mostrar_tile (request, id):
     http_response = render(
         request=request,
         template_name='blog/detalle_tile.html',
-        context=contexto,
+        context=contexto
     )
     return http_response
 
@@ -83,7 +81,6 @@ def editar_tile (request,id):
             titulo = data["titulo"]
             subtitulo = data["subtitulo"]
             cuerpo = data["cuerpo"]
-            imagen = data["imagen"]
             # creo un articulo en memoria RAM
             articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo, imagen=imagen)
             articulo.save()
@@ -95,7 +92,6 @@ def editar_tile (request,id):
             'titulo' : articulo.titulo,
             'subtitulo' : articulo.subtitulo,
             'cuerpo' : articulo.cuerpo,
-            'imagen' : articulo.imagen
         }
         formulario = FormTile(initial=inicial)
     return render(

@@ -8,4 +8,3 @@ class FormTile(forms.Form):
     titulo = forms.CharField(max_length=150)
     subtitulo = forms.CharField(max_length=100)
     cuerpo = forms.CharField(widget=forms.Textarea)
-    imagen = forms.ImageField()  # campo para la imagen
