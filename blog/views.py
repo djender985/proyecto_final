@@ -16,7 +16,8 @@ def listar_tiles(request):
             "titulo": a.titulo,
             "subtitulo": a.subtitulo,
             "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:300]),
-            "fecha": a.fecha
+            "fecha": a.fecha,
+            "imagen": a.imagen,
         }
         for a in articulos
     ]

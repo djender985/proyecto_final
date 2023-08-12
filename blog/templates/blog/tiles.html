@@ -9,7 +9,7 @@
 <table class="table">
     {% for articulo in articulos %}
     <tr>
-        <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"> </td>
+        <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"/> </td>
         <td style="font-size: large;"> {{ articulo.autor }} {{ articulo.fecha }} </td>
         <td></td>
     </tr>
@@ -40,7 +40,7 @@
     <tr>
         <td></td>
         <td> 
-            {{ img.articulo.imagen}}
+            <img src="{{articulo.imagen}}"/> 
         </td>
         <td></td>
         <td></td>
