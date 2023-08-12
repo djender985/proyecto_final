@@ -104,7 +104,6 @@ def editar_tile (request,id):
         context={'formulario': formulario},
     )
 
-@login_required
 def borrar_tile (request,id):
     # obtienes el curso de la base de datos
     articulo = Articulo.objects.get(id=id)
