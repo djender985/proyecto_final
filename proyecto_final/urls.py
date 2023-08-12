@@ -7,6 +7,6 @@ from proyecto_final.views import bienvenida_tiles
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenida_tiles, name='inicio'),
-    path('/feed', include('blog.urls')),
-    path("perfil/", include("perfiles.urls")),
+    path('tiles/', include('blog.urls')),
+    path('perfil/', include("perfiles.urls")),
 ]
