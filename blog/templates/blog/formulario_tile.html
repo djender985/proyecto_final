@@ -5,7 +5,7 @@
 {% endblock titulo %}
 
 {% block contenido %}
-<form method="post">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ formulario.as_p }}
   <input class="btn btn-success" type="submit" value="Publicar" />

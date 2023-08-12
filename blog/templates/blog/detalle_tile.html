@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block navigation %}
-{% endblock navigation %}
 
 {% block contenido %}
 <h3>Tiles</h3>
@@ -9,7 +7,6 @@
 <br>
 
 <table class="table">
-  <tbody>
     <tr>
         <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"> </td>
         <td style="font-size: large;"> {{ articulo.autor }} {{ articulo.fecha }} </td>
@@ -27,7 +24,7 @@
         <td></td>
         <td> {{ articulo.cuerpo }} </td>
         <td>        
-            {% if user == articulo.creador %}     
+            {% if user == articulo.creador %}
             <form action="{% url 'borrar_tile' articulo.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit">
@@ -43,5 +40,6 @@
             {% endif %}
         </td>
     </tr>
-    <br>
-    <br>
+</table>
+
+{% endblock contenido %}

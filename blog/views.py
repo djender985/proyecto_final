@@ -11,10 +11,12 @@ def listar_tiles(request):
     articulos = Articulo.objects.all()
     articulos_modificados = [
         {
+            "id": a.id,
             "autor": a.autor,
             "titulo": a.titulo,
             "subtitulo": a.subtitulo,
-            "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:30]),
+            "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:300]),
+            "fecha": a.fecha
         }
         for a in articulos
     ]
@@ -42,8 +44,9 @@ def crear_tile(request):
             titulo = data["titulo"]
             subtitulo = data["subtitulo"]
             cuerpo = data["cuerpo"]
+            imagen = data["imagen"]
             # creo un articulo en memoria RAM
-            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo)
+            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo, imagen=imagen)
             # Lo guardan en la Base de datos
             articulo.save()
 
@@ -62,7 +65,7 @@ def crear_tile(request):
 
 def mostrar_tile (request, id):
     articulo = Articulo.objects.get(id=id)
-    contexto = { "articulos": articulo}
+    contexto = { "articulo": articulo}
     http_response = render(
         request=request,
         template_name='blog/detalle_tile.html',
@@ -82,7 +85,7 @@ def editar_tile (request,id):
             subtitulo = data["subtitulo"]
             cuerpo = data["cuerpo"]
             # creo un articulo en memoria RAM
-            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo, imagen=imagen)
+            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo)
             articulo.save()
 
             url_exitosa = reverse('detalle_tile')

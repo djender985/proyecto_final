@@ -7,7 +7,6 @@
 <br>
 
 <table class="table">
-  <tbody>
     {% for articulo in articulos %}
     <tr>
         <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"> </td>
@@ -17,10 +16,12 @@
     <tr>
         <td></td>
         <td style="font-size: medium;"> {{ articulo.titulo }} </td>
+        <td></td>
     </tr>
     <tr> 
         <td></td>
-        <td style="font-size: small;"> {{ articulo.subtitulo }} </td> 
+        <td style="font-size: small;"> {{ articulo.subtitulo }} </td>
+        <td></td>
     </tr>
     <tr>
         <td></td>
@@ -36,10 +37,15 @@
             {% endif %}
         </td>
     </tr>
-    <br>
-    <br>
+    <tr>
+        <td></td>
+        <td> 
+            {{ img.articulo.imagen}}
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
     {% endfor %}
-  </tbody>
 </table>
 
 {% endblock contenido %}
