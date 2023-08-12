@@ -1,11 +1,12 @@
 # import de funciones de django
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from proyecto_final.views import bienvenida_tiles
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio, name='inicio')
+    path('', bienvenida_tiles, name='inicio'),
     path('/feed', include('blog.urls')),
-    path("perfil/", include("perfil.urls")),
+    path("perfil/", include("perfiles.urls")),
 ]
