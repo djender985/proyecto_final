@@ -25,15 +25,17 @@
         <td style="font-size: large;"> {{ articulo.cuerpo }} </td>
         <td></td>
         <tr>
+            {% if user == articulo.autor %}
             <td></td>
-            <td>
-                {% if user == articulo.autor %}
+            <td>                
                 <form action="{% url 'borrar_tile' articulo.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit">
-                    <i class="bi-trash"></i>
+                        <i class="bi-trash"></i>
                     </button>
                 </form>
+            </td>
+            <td>
                 <form action="{% url 'editar_tile' articulo.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit">

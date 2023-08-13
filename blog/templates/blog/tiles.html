@@ -25,17 +25,8 @@
     </tr>
     <tr>
         <td></td>
-        <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">ver mas</a></td>
-        <td>        
-            {% if user == articulo.creador %}     
-            <form action="{% url 'borrar_tile' articulo.id %}" method="post">
-                {% csrf_token %}
-                <button type="submit">
-                <i class="bi-trash"></i>
-                </button>
-            </form>
-            {% endif %}
-        </td>
+        <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">Ver mas</a></td>
+        <td></td>
     </tr>
     <tr>
         <td></td>

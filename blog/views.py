@@ -104,12 +104,10 @@ def editar_tile (request,id):
         context={'formulario': formulario},
     )
 
-def borrar_tile (request,id):
-    # obtienes el curso de la base de datos
+@login_required
+def borrar_tile (request, id):
     articulo = Articulo.objects.get(id=id)
-    if request.method == "POST":
-        # borra el curso de la base de datos
-        articulo.delete()
-        # redireccionamos a la URL exitosa
-        url_exitosa = reverse('tiles')
+    if request.method == "POST":        
+        articulo.delete()       
+        url_exitosa = reverse('wall')
         return redirect(url_exitosa)

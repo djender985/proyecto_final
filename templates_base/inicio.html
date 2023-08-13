@@ -10,7 +10,8 @@
                 <div class="text-center text-white">
                     <!-- Page heading-->
                     {% block solo_bienvenida %}
-                    <h1 class="mb-5">Tiles</h1>                                   
+                    <h1 class="mb-5">Bienvenido a Tiles</h1>
+                    <h2> {{ user.get_full_name }} </h2>
                     <div class="container">
                         <a class="btn btn-primary" href="{% url 'wall' %}">ENTRAR</a>
                     </div>
