@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        {% block head%}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -17,12 +17,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        {% endblock head%}
     </head>
 
     <body>
         {% block navigation %}
         <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
+        <nav class="navbar navbar-light bg-light static-top nav-background">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'wall' %}">Muro de Tiles</a>
                 <a class="navbar-brand" href="{% url 'crear_tile' %}">Publicar Tile</a>
@@ -61,16 +62,11 @@
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="">Ayuda</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="">Acerca de Tiles</a></li>                      
+                        <ul class="list-inline mb-2" style="text-align: center;">
+                            <li class="list-inline-item"><a href="{% url 'about' %}">Acerca de Tiles</a></li>                      
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Curso de Python - CoderHouse.</p>
-                    </div>                    
-                </div>
+                        <p class="text-muted small mb-4 mb-lg-0" style="text-align: center;">&copy; Proyecto Final del Curso de Python en CoderHouse.</p>
+                        <p class="text-muted small mb-4 mb-lg-0" style="text-align: center;">Ender Davila</p>
             </div>
         </footer>
 

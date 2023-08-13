@@ -1,41 +1,45 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<h3>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
-    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+<h3 class="tiles-h1">
     Tiles</h3>
-<br>
-<br>
+<br/>
 
 <table class="table">
     {% for articulo in articulos %}
     <tr>
-        <td> <img src="{{user.avatar.imagen.url}}" style="max-width:25px"/> </td>
-        <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: x-small;"> ({{ articulo.fecha }}) </td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td style="font-size: medium;"> {{ articulo.titulo }} </td>
-        <td></td>
-    </tr>
-    <tr> 
-        <td></td>
-        <td style="font-size: small;"> {{ articulo.subtitulo }} </td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">Ver mas</a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td> 
-            <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
+        <td>
+            <table class="inner-table">
+                <tr>
+                    <td> <img src="{{articulo.avatar.imagen.url}}" style="max-width:25px"/> </td>
+                    <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: x-small;"> ({{ articulo.fecha }}) </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="font-size: medium;"> {{ articulo.titulo }} </td>
+                    <td></td>
+                </tr>
+                <tr> 
+                    <td></td>
+                    <td style="font-size: small;"> {{ articulo.subtitulo }} </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">Ver mas</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> 
+                        <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </td>
-        <td></td>
-        <td></td>
     </tr>
     {% endfor %}
 </table>

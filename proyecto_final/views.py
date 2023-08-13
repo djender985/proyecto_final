@@ -9,3 +9,11 @@ def bienvenida_tiles (request):
         context={},
     )
     return respuesta_http
+
+def acerca_de (request):
+    respuesta_http= render(
+        request=request,
+        template_name='about.html',
+        context={},
+    )
+    return respuesta_http

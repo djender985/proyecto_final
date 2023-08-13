@@ -1,13 +1,19 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from perfiles.models import Avatar
 
 from blog.models import Articulo
 from blog.forms import FormTile
 # Create your views here.
 
+def getAvatar (user_id):
+    try:
+        return Avatar.objects.get(user_id=user_id)
+    except Avatar.DoesNotExist:
+        return ""
 
-def listar_tiles(request):
+def listar_tiles(request):    
     articulos = Articulo.objects.all()
     articulos_modificados = [
         {
@@ -18,6 +24,7 @@ def listar_tiles(request):
             "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:300]),
             "fecha": a.fecha,
             "imagen": a.imagen,
+            "avatar": getAvatar(a.autor_id)
         }
         for a in articulos
     ]
@@ -66,7 +73,8 @@ def crear_tile(request):
 
 def mostrar_tile (request, id):
     articulo = Articulo.objects.get(id=id)
-    contexto = { "articulo": articulo}
+    avatar = getAvatar(articulo.autor_id)
+    contexto = { "articulo": articulo, "avatar": avatar}
     http_response = render(
         request=request,
         template_name='blog/detalle_tile.html',
@@ -106,7 +114,7 @@ def editar_tile (request,id):
 @login_required
 def borrar_tile (request, id):
     articulo = Articulo.objects.get(id=id)
-    if request.method == "POST":        
+    if request.method == "GET":        
         articulo.delete()       
         url_exitosa = reverse('wall')
         return redirect(url_exitosa)

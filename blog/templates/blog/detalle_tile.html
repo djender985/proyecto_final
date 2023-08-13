@@ -2,15 +2,14 @@
 
 
 {% block contenido %}
-<h3>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
-    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+<h3 class="tiles-h1">
     Tiles</h3>
 <br>
 <br>
 
 <table class="table">
     <tr>
-        <td> <img src="{{user.avatar.imagen.url}}" style="max-width:25px"> </td>
+        <td> <img src="{{avatar.imagen.url}}" style="max-width:25px"/> </td>
         <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: small;"> ({{ articulo.fecha }}) </td>
     </tr>
     <tr>
@@ -32,23 +31,12 @@
         </td>
     </tr>
     <tr>
-        {% if user == articulo.autor %}
         <td></td>
-        <td>                
-            <form action="{% url 'borrar_tile' articulo.id %}" method="post">
-                {% csrf_token %}
-                <button type="submit">
-                    <i class="bi-trash"></i>
-                </button>
-            </form>
-        </td>
         <td>
-            <form action="{% url 'editar_tile' articulo.id %}" method="post">
+            {% if user == articulo.autor %}                           
                 {% csrf_token %}
-                <button type="submit">
-                <i class="bi-edit"></i>
-                </button>
-            </form>
+                <a href="{% url 'borrar_tile' articulo.id %}"><i class="bi bi-trash bi-buttons"></i></a>
+                <a href="{% url 'editar_tile' articulo.id %}"><i class="bi bi-pencil-square bi-buttons"></i></a>
             {% endif %}
         </td>
     </tr>

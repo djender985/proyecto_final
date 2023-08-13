@@ -69,6 +69,160 @@
   box-sizing: border-box;
 }
 
+.tiles-h1 {
+  margin-left: 50px;
+}
+
+.bi-buttons {
+  font-size: 32px;
+  margin-right: 20px;
+}
+
+.p-about {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.container-tiles {
+  background-image: url('../assets/img/black_tiles.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.inner-table {
+  border-style: none;
+}
+
+.nav-background {
+  background-image: url('../assets/img/triangular_tiles.jpg');
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'Anathema';
+  src: url('Anathema-X3Koo.ttf') format('truetype');
+}
+
+.f1 {
+  font-family: 'Anathema', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Baletta';
+  src: url('Baletta-2OwRv.ttf') format('truetype');
+}
+
+.f2 {
+  font-family: 'Baletta', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  color: #dc3545;
+}
+
+@font-face {
+  font-family: 'Biancha';
+  src: url('Biancha-X3VOa.otf') format('opentype');
+}
+
+.f3 {
+  font-family: 'Biancha', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Cadillac';
+  src: url('CadillacPersonalUseItalic-K7pny.ttf') format('truetype');
+}
+
+.f4 {
+  font-family: 'Cadillac', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Lemon';
+  src: url('LemonJellyPersonalUse-dEqR.ttf') format('truetype');
+}
+
+.f5 {
+  font-family: 'Lemon', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'LoveSeed';
+  src: url('LoveSeed-z8EVX.ttf') format('truetype');
+}
+
+.f6 {
+  font-family: 'LoveSeed', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'NovaQuinta';
+  src: url('NovaQuintaPersonalUseRegular-d94Zg.otf') format('opentype');
+}
+
+.f7 {
+  font-family: 'NovaQuinta', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'SimpleMonologue';
+  src: url('SimpleMonologueDemoRegular-qVq0.ttf') format('truetype');
+}
+
+.f8 {
+  font-family: 'SimpleMonologue', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'StylishCalligraphy';
+  src: url('StylishCalligraphyDemo-XPZZ.ttf') format('truetype');
+}
+
+.f9 {
+  font-family: 'StylishCalligraphy', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Symphonigraphy';
+  src: url('Symphonigraphy-K7w0Z.ttf') format('truetype');
+}
+
+.f10 {
+  font-family: 'StylishCalligraphy', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Secania';
+  src: url('Secania-gxLVR.ttf') format('truetype');
+}
+
+.f11 {
+  font-family: 'Secania', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+/* Aplicar la fuente personalizada a un elemento específico */
+
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Acerca de Tiles</title> 
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    </head>
+    <body class="container-tiles">
+        <div class="container">
+            <h1 class="f2">Tiles: Tu Muro Creativo</h1>
+            <div class="img-separator"></div>
+            <div class="p-about f11">
+                <p>En Tiles, damos vida a la creatividad y la expresión personal. Imagina cada publicación como una baldosa única que contribuye a la construcción de un muro lleno de historias, ideas y pasiones. Cada vez que compartes algo en nuestro espacio, estás agregando una pieza única al mosaico en constante evolución.</p><br>
+                <p>Tiles es mucho más que un blog; es un lugar donde las ideas se conectan y las voces encuentran su eco. Este sitio nació de la pasión y la curiosidad de Ender Davila, un apasionado analista de datos en constante búsqueda de nuevos desafíos y oportunidades de crecimiento en el siempre cambiante mundo de la tecnología.</p><br>
+                <div> 
+                    <img src="{% static 'assets/img/creador.png' %}" style="max-width:160px"/>
+                </div><br>
+                <p>Ender Davila, el creador detrás de Tiles, se deleita en explorar las intersecciones entre datos y diseño, y tiene un aprecio por la belleza de las soluciones elegantes. Cada línea de código, cada artículo compartido y cada innovación tecnológica en Tiles refleja su dedicación a hacer que este espacio sea un escaparate para la creatividad y la innovación.</p><br>
+                <p>En Tiles, creemos en la comunidad y en la idea de que cada aporte, por pequeño que parezca, es valioso. Te invitamos a unirte a nosotros en este emocionante viaje de descubrimiento y crecimiento. Ya seas un apasionado desarrollador, un entusiasta de la tecnología o simplemente alguien curioso por explorar nuevas ideas, estás invitado a contribuir a nuestro muro de baldosas.</p><br>
+                <p>Así que adelante, crea, comparte y sé parte de este emocionante viaje en Tiles. Tu creatividad es la fuerza que impulsa nuestro muro en constante evolución, lleno de baldosas que cuentan historias únicas y auténticas.</p><br>
+                <p>¡Bienvenido a Tiles, donde cada baldosa es una ventana a la imaginación y la innovación!</p><br>
+                <a href="{% url 'inicio' %}"><i class="bi bi-arrow-left-circle-fill"></i></a>
+            </div>
+        </div>        
+    </body>
+</html>

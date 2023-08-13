@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<h3>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
-  ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+<h3 class="tiles-h1">
   Publicar un Tile nuevo</h3>
 <br>
 <br>
 
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
-  {{ formulario.as_p }}
-  <input class="btn btn-success" type="submit" value="Publicar" />
+  <table>
+  {{ formulario.as_table }}
+  </table>
+  <input class="btn btn-success" type="submit" value="Publicar"/>&nbsp;&nbsp;
+  <a href="{% url 'wall' %}"><i class="bi bi-x-circle bi-buttons"></i></a>
 </form>
-<br>
-<a href="{% url 'wall' %}">Cancelar</a>
 {% endblock contenido %}
