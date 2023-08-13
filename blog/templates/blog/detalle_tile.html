@@ -2,15 +2,16 @@
 
 
 {% block contenido %}
-<h3>Tiles</h3>
+<h3>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+    Tiles</h3>
 <br>
 <br>
 
 <table class="table">
     <tr>
-        <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"> </td>
+        <td> <img src="{{user.avatar.imagen.url}}" style="max-width:25px"> </td>
         <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: small;"> ({{ articulo.fecha }}) </td>
-        <td></td>
     </tr>
     <tr>
         <td></td>
@@ -23,28 +24,34 @@
     <tr>
         <td></td>
         <td style="font-size: large;"> {{ articulo.cuerpo }} </td>
+    </tr>
+    <tr>
         <td></td>
-        <tr>
-            {% if user == articulo.autor %}
-            <td></td>
-            <td>                
-                <form action="{% url 'borrar_tile' articulo.id %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">
-                        <i class="bi-trash"></i>
-                    </button>
-                </form>
-            </td>
-            <td>
-                <form action="{% url 'editar_tile' articulo.id %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">
-                    <i class="bi-edit"></i>
-                    </button>
-                </form>
-                {% endif %}
-            </td>
-        </tr>
+        <td> 
+            <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
+        </td>
+    </tr>
+    <tr>
+        {% if user == articulo.autor %}
+        <td></td>
+        <td>                
+            <form action="{% url 'borrar_tile' articulo.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit">
+                    <i class="bi-trash"></i>
+                </button>
+            </form>
+        </td>
+        <td>
+            <form action="{% url 'editar_tile' articulo.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit">
+                <i class="bi-edit"></i>
+                </button>
+            </form>
+            {% endif %}
+        </td>
+    </tr>
 </table>
 
 {% endblock contenido %}

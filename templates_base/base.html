@@ -29,8 +29,7 @@
                 {% if user.is_authenticated %}
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div style="display: inline-flex;">
-                            <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;">
+                        <div style="display: inline-flex;">                            
                             <span>{{ user.username }}</span>
                         </div>
                     </button>
@@ -54,7 +53,7 @@
         </nav>
         {% endblock navigation %}
 
-        <section style="padding:4rem 3rem;">
+        <section>
             {% block contenido %}
             {% endblock contenido %}
         </section>

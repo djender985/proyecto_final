@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
-
 {% block contenido %}
-<h3>Tiles</h3>
+<h3>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+    ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+    Tiles</h3>
 <br>
 <br>
 
 <table class="table">
     {% for articulo in articulos %}
     <tr>
-        <td> <img src="{{user.avatar.imagen.url}}" styles="max_width:400px;margin-right:10px;"/> </td>
+        <td> <img src="{{user.avatar.imagen.url}}" style="max-width:25px"/> </td>
         <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: x-small;"> ({{ articulo.fecha }}) </td>
         <td></td>
     </tr>
@@ -31,7 +32,7 @@
     <tr>
         <td></td>
         <td> 
-            <img src="{{articulo.imagen}}"/> 
+            <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
         </td>
         <td></td>
         <td></td>

@@ -77,30 +77,29 @@ def mostrar_tile (request, id):
 def editar_tile (request,id):
     articulo = Articulo.objects.get(id=id)
     if request.method == "POST":
-        formulario = FormTile(request.POST)
+        formulario = FormTile(request.POST, request.FILES)
 
         if formulario.is_valid():
             data = formulario.cleaned_data
-            autor = request.user
-            titulo = data["titulo"]
-            subtitulo = data["subtitulo"]
-            cuerpo = data["cuerpo"]
-            # creo un articulo en memoria RAM
-            articulo = Articulo(autor=autor, titulo=titulo, subtitulo=subtitulo, cuerpo=cuerpo)
+            articulo.titulo = data["titulo"]
+            articulo.subtitulo = data["subtitulo"]
+            articulo.cuerpo = data["cuerpo"]
+            articulo.imagen = data["imagen"]
             articulo.save()
 
-            url_exitosa = reverse('detalle_tile')
+            url_exitosa = reverse('wall')
             return redirect(url_exitosa)
     else:  # GET
         inicial = {           
             'titulo' : articulo.titulo,
             'subtitulo' : articulo.subtitulo,
             'cuerpo' : articulo.cuerpo,
+            'imagen' : articulo.imagen,
         }
         formulario = FormTile(initial=inicial)
     return render(
         request=request,
-        template_name='blog/formulario_tile.html',
+        template_name='blog/formulario_edit_tile.html',
         context={'formulario': formulario},
     )
 

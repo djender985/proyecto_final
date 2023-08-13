@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-
-
 {% block contenido %}
 <header class="masthead" style="background-image: url('/static/assets/img/black_tiles.jpg');">
     <div class="container position-relative">
@@ -12,6 +10,9 @@
                     {% block solo_bienvenida %}
                     <h1 class="mb-5">Bienvenido a Tiles</h1>
                     <h2> {{ user.get_full_name }} </h2>
+                    <div>
+                        <img src="{{user.avatar.imagen.url}}" style="max-width:100px">
+                    </div>
                     <div class="container">
                         <a class="btn btn-primary" href="{% url 'wall' %}">ENTRAR</a>
                     </div>

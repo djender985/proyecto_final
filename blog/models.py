@@ -8,4 +8,4 @@ class Articulo (models.Model):
     subtitulo = models.CharField(max_length=100)
     cuerpo = models.TextField()    
     fecha = models.DateTimeField(auto_now_add=True)
-    imagen = models.ImageField(upload_to='static/assets/tiles_img/', null=True, blank=True)
+    imagen = models.ImageField(upload_to='tile_img', null=True, blank=True)
