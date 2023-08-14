@@ -13,10 +13,6 @@ pip install -r requirements.txt
 ```
 
 ## Instrucciones para entrar al panel aministrativo de Django
-+ En consola, crear un superuser:
-```
-python manage.py createsuperuser
-```
 + Acceder con user y password via:
 ```
 127.0.0.1:8000/admin
