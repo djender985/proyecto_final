@@ -21,7 +21,7 @@ def listar_tiles(request):
             "autor": a.autor,
             "titulo": a.titulo,
             "subtitulo": a.subtitulo,
-            "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:300]),
+            "cuerpo": a.cuerpo.replace(a.cuerpo, a.cuerpo[:150]),
             "fecha": a.fecha,
             "imagen": a.imagen,
             "avatar": getAvatar(a.autor_id)

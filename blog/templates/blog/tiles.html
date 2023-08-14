@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 
-{% block contenido %}
-<h3 class="tiles-h1">
-    Tiles</h3>
-<br/>
+{% block boton_nav_variable %}
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+{% endblock boton_nav_variable %}
 
+{% block Titulo_nav_bar %}
+<div class="container">
+    <h1 class="f12" style="font-size: 70px;">
+        Tiles
+    </h1>
+</div>
+{% endblock Titulo_nav_bar %}
+
+{% block contenido %}
+
+{% if articulos %}
 <table class="table">
     {% for articulo in articulos %}
     <tr>
@@ -43,5 +53,8 @@
     </tr>
     {% endfor %}
 </table>
+{% else %}
+<p>No hay entradas aún.</p>
+{% endif %}
 
 {% endblock contenido %}

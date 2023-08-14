@@ -25,7 +25,9 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top nav-background">
             <div class="container">
+                {% block boton_nav_variable %}
                 <a class="navbar-brand" href="{% url 'wall' %}">Muro de Tiles</a>
+                {% endblock boton_nav_variable %}
                 <a class="navbar-brand" href="{% url 'crear_tile' %}">Publicar Tile</a>
                 {% if user.is_authenticated %}
                 <div class="dropdown">
@@ -51,6 +53,8 @@
                 <a class="btn btn-success" href="{% url 'registro' %}">Registro</a>
                 {% endif %}
             </div>
+            {% block Titulo_nav_bar %}
+            {% endblock Titulo_nav_bar %}
         </nav>
         {% endblock navigation %}
 

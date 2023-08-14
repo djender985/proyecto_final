@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
+{% block Titulo_nav_bar %}
+<div class="container">
+    <h1 class="f12" style="font-size: 70px;">
+        Detalle de Tile
+    </h1>
+</div>
+{% endblock Titulo_nav_bar %}
 
 {% block contenido %}
-<h3 class="tiles-h1">
-    Tiles</h3>
-<br>
-<br>
 
 <table class="table">
     <tr>
@@ -18,11 +21,11 @@
     </tr>
     <tr> 
         <td></td>
-        <td style="font-size: medium;"> {{ articulo.subtitulo }} </td> 
+        <td style="font-size: large;"> {{ articulo.subtitulo }} </td> 
     </tr>
     <tr>
         <td></td>
-        <td style="font-size: large;"> {{ articulo.cuerpo }} </td>
+        <td style="font-size: medium;"> {{ articulo.cuerpo | linebreaks }} </td>
     </tr>
     <tr>
         <td></td>
@@ -32,12 +35,13 @@
     </tr>
     <tr>
         <td></td>
-        <td>
+        <td>            
             {% if user == articulo.autor %}                           
                 {% csrf_token %}
                 <a href="{% url 'borrar_tile' articulo.id %}"><i class="bi bi-trash bi-buttons"></i></a>
                 <a href="{% url 'editar_tile' articulo.id %}"><i class="bi bi-pencil-square bi-buttons"></i></a>
             {% endif %}
+            <a href="{% url 'wall' %}"><i class="bi bi-arrow-left-circle-fill bi-buttons">Volver al muro de Tiles</i></a>
         </td>
     </tr>
 </table>
