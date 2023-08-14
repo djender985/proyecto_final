@@ -96,18 +96,6 @@
 }
 
 @font-face {
-  font-family: 'Anathema';
-  src: url('Anathema-X3Koo.ttf') format('truetype');
-}
-
-.f1 {
-  font-family: 'Anathema', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
   font-family: 'Baletta';
   src: url('Baletta-2OwRv.ttf') format('truetype');
 }
@@ -117,42 +105,6 @@
   text-align: center;
   margin-top: 150px;
   color: #dc3545;
-}
-
-@font-face {
-  font-family: 'Biancha';
-  src: url('Biancha-X3VOa.otf') format('opentype');
-}
-
-.f3 {
-  font-family: 'Biancha', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
-  font-family: 'Cadillac';
-  src: url('CadillacPersonalUseItalic-K7pny.ttf') format('truetype');
-}
-
-.f4 {
-  font-family: 'Cadillac', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
-  font-family: 'Lemon';
-  src: url('LemonJellyPersonalUse-dEqR.ttf') format('truetype');
-}
-
-.f5 {
-  font-family: 'Lemon', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
 }
 
 @font-face {
@@ -168,53 +120,6 @@
   color: #dc3545
 }
 
-@font-face {
-  font-family: 'NovaQuinta';
-  src: url('NovaQuintaPersonalUseRegular-d94Zg.otf') format('opentype');
-}
-
-.f7 {
-  font-family: 'NovaQuinta', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
-  font-family: 'SimpleMonologue';
-  src: url('SimpleMonologueDemoRegular-qVq0.ttf') format('truetype');
-}
-
-.f8 {
-  font-family: 'SimpleMonologue', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
-  font-family: 'StylishCalligraphy';
-  src: url('StylishCalligraphyDemo-XPZZ.ttf') format('truetype');
-}
-
-.f9 {
-  font-family: 'StylishCalligraphy', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
-
-@font-face {
-  font-family: 'Symphonigraphy';
-  src: url('Symphonigraphy-K7w0Z.ttf') format('truetype');
-}
-
-.f10 {
-  font-family: 'Symphonigraphy', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  color: #dc3545
-}
 
 @font-face {
   font-family: 'Secania';
@@ -236,7 +141,7 @@
   font-family: 'Ananda', sans-serif;
   text-align: center;
   margin-top: 5px;
-  color: #dc3545
+  color: #dc3545;
 }
 /* Aplicar la fuente personalizada a un elemento específico */
 

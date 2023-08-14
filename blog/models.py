@@ -9,3 +9,6 @@ class Articulo (models.Model):
     cuerpo = models.TextField()    
     fecha = models.DateTimeField(auto_now_add=True)
     imagen = models.ImageField(upload_to='tile_img', null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.titulo}, {self.subtitulo}, {self.cuerpo}"
