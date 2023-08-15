@@ -10,8 +10,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenida_tiles, name='inicio'),
     path('tiles/', include('blog.urls')),
-    path('perfil/', include("perfiles.urls")),
-    path('about/', acerca_de, name='about')
+    path('perfil/', include('perfiles.urls')),
+    path('about/', acerca_de, name='about'),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
