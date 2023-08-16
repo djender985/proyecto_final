@@ -38,3 +38,5 @@ Comenzar en la URL raiz "/" y seguir el flujo normal de navegacion hasta probar 
 + Usuarios podran subir un Avatar para su perfil.
 + Un superusuario logueado podrá editar cualquier cosa en el panel administrativo.
 
+## Video Demo de Uso
+https://www.loom.com/share/0c202d3eb2a44473978a45501576efb7
