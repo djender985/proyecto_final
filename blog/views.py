@@ -14,7 +14,7 @@ def getAvatar (user_id):
         return ""
 
 def listar_tiles(request):    
-    articulos = Articulo.objects.all()
+    articulos = Articulo.objects.all().order_by('-fecha')
     articulos_modificados = [
         {
             "id": a.id,
