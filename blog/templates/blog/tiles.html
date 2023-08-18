@@ -13,48 +13,48 @@
 {% endblock Titulo_nav_bar %}
 
 {% block contenido %}
-    <div style="margin-left: 25px;">
-        {% if articulos %}
-        <table class="table">
-            {% for articulo in articulos %}
-            <tr>
-                <td>
-                    <table class="inner-table">
-                        <tr>
-                            <td> <img src="{{articulo.avatar.imagen.url}}" style="max-width:30px"/> </td>
-                            <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: x-small;"> ({{ articulo.fecha }}) </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="font-size: medium;"> {{ articulo.titulo }} </td>
-                            <td></td>
-                        </tr>
-                        <tr> 
-                            <td></td>
-                            <td style="font-size: small;"> {{ articulo.subtitulo }} </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">Ver mas</a></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td> 
-                                <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-        {% else %}
-        <p>No hay entradas aún.</p>
-        {% endif %}
-    </div>
+        <div style="margin-left: 25px;">
+            {% if articulos %}
+            <table class="table">
+                {% for articulo in articulos %}
+                <tr>
+                    <td>
+                        <table class="inner-table">
+                            <tr>
+                                <td> <img src="{{articulo.avatar.imagen.url}}" style="max-width:30px"/> </td>
+                                <td style="font-size: large;"> {{ articulo.autor }} <a style="font-size: x-small;"> ({{ articulo.fecha }}) </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="font-size: medium;"> {{ articulo.titulo }} </td>
+                                <td></td>
+                            </tr>
+                            <tr> 
+                                <td></td>
+                                <td style="font-size: small;"> {{ articulo.subtitulo }} </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>{{ articulo.cuerpo }} ... <a href="{% url 'mostrar_tile' articulo.id %}">Ver mas</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td> 
+                                    <img src="{{articulo.imagen.url}}" style="max-width:450px"/> 
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No hay entradas aún.</p>
+            {% endif %}
+        </div>
 {% endblock contenido %}

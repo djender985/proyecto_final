@@ -81,6 +81,12 @@
 }
 
 .container-tiles {
+  background-image: url('../assets/img/white_tiles2.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.container-about {
   background-image: url('../assets/img/black_tiles.jpg');
   background-size: cover;
   color: white;
