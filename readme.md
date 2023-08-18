@@ -26,6 +26,8 @@ pip install -r requirements.txt
 + djender, contra123
 + maripea85, Admin_123
 + lunalunatica, Admin_123
++ Neo85, Admin_123
++ ElBelloLloyd, Admin_123
 
 ## Instrucciones de uso
 Comenzar en la URL raiz "/" y seguir el flujo normal de navegacion hasta probar las diferentes posibilidades que ofrece el sitio web. Se recomienda usar en un navegador incognito para que no tenga inconvenientes cargando el archivo .css ya que le realice modificaciones.
