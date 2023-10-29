@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '192.168.0.5',
     '127.0.0.1',
+    'localhost',
+    'djender.pythonanywhere.com'
 ]
 
 
@@ -85,7 +87,7 @@ WSGI_APPLICATION = 'proyecto_final.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -125,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
