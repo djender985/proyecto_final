@@ -26,14 +26,14 @@
         <nav class="navbar navbar-light bg-light static-top nav-background">
             <div class="container">
                 {% block boton_nav_variable %}
-                <a class="navbar-brand" href="{% url 'wall' %}">Muro de Tiles</a>
+                <a class="navbar-brand" href="{% url 'wall' %}">Tiles</a>
                 {% endblock boton_nav_variable %}
                 <a class="navbar-brand" href="{% url 'crear_tile' %}">Publicar Tile</a>
                 {% if user.is_authenticated %}
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <div style="display: inline-flex;">
-                            <img src="{{user.avatar.imagen.url}}" style="max-width:30px; margin-right: 10px;"/>                          
+                            <img src="{{user.avatar.imagen.url}}" style="max-width:30px; margin-right: 15px;"/>                          
                             <span>{{ user.username }}</span>
                         </div>
                     </button>
