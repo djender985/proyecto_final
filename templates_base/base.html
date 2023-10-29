@@ -50,8 +50,8 @@
                     </ul>
                 </div>
                 {% else %}
-                <a class="btn btn-primary" href="{% url 'login' %}">Inicio sesión</a>
-                <a class="btn btn-success" href="{% url 'registro' %}">Registro</a>
+                <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+                <a class="btn btn-danger" href="{% url 'registro' %}">Registro</a>
                 {% endif %}
             </div>
             {% block Titulo_nav_bar %}
@@ -70,7 +70,7 @@
                         <ul class="list-inline mb-2" style="text-align: center;">
                             <li class="list-inline-item"><a href="{% url 'about' %}">Acerca de Tiles</a></li>                      
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0" style="text-align: center;">&copy; Proyecto Final del Curso de Python en CoderHouse.</p>
+                        <p class="text-muted small mb-4 mb-lg-0" style="text-align: center;">&copy; All rights reserved.</p>
                         <p class="text-muted small mb-4 mb-lg-0" style="text-align: center;">Ender Davila</p>
             </div>
         </footer>
